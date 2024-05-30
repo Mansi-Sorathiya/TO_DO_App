@@ -19,7 +19,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements OnItemSelectionChangeListener{
+public class MainActivity extends AppCompatActivity implements OnItemSelectionChangeListener {
 
     ImageView add;
     TextView btndelete;
@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectionCh
     RecyclerView recyclerview;
     My_Database db;
     Adapter adapter;
-    ImageView close ;
+    ImageView close;
     TextView textView;
-    Button addnewcategory ;
-    EditText addCategory ;
+    Button addnewcategory;
+    EditText addCategory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +63,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectionCh
                             addCategory.setText("");
                             refreshRecyclerView();
                             dialog.dismiss();
-                        }
-                        else {
+                        } else {
                             textView.setText("This field is required");
                         }
                     }
@@ -119,17 +118,17 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectionCh
             @Override
             public void onEditItemClicked(String name, Integer id, int position) {
 
-                CreateEdit(name,id,position);
+                CreateEdit(name, id, position);
             }
 
-        },this);
+        }, this);
         LinearLayoutManager manager = new LinearLayoutManager(getApplicationContext());
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerview.setLayoutManager(manager);
         recyclerview.setAdapter(adapter);
     }
 
-    private void CreateEdit(String name,Integer id,int position) {
+    private void CreateEdit(String name, Integer id, int position) {
         BottomSheetDialog dialog = new BottomSheetDialog(MainActivity.this);
         dialog.setContentView(R.layout.dialog);
 

@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.Holder>{
+public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
     MainActivity mainActivity;
     ArrayList<Model> list;
     My_Database db;
@@ -30,8 +30,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder>{
     @NonNull
     @Override
     public Adapter.Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(mainActivity).inflate(R.layout.item,parent,false);
-        Holder holder=new Holder(view);
+        View view = LayoutInflater.from(mainActivity).inflate(R.layout.item, parent, false);
+        Holder holder = new Holder(view);
         return holder;
     }
 
@@ -43,7 +43,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder>{
         holder.edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                editItemClickListener.onEditItemClicked(list.get(position).getName(),list.get(position).getId(),position);
+                editItemClickListener.onEditItemClicked(list.get(position).getName(), list.get(position).getId(), position);
             }
         });
 
@@ -79,14 +79,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder>{
 
     public class Holder extends RecyclerView.ViewHolder {
         TextView name;
-        ImageView edit,delete;
+        ImageView edit, delete;
         CheckBox checkBox;
+
         public Holder(@NonNull View itemView) {
             super(itemView);
 
-            name=itemView.findViewById(R.id.textview);
-            checkBox=itemView.findViewById(R.id.checkbox);
-            edit=itemView.findViewById(R.id.edit);
+            name = itemView.findViewById(R.id.textview);
+            checkBox = itemView.findViewById(R.id.checkbox);
+            edit = itemView.findViewById(R.id.edit);
 //           delete=itemView.findViewById(R.id.delete);
 
         }

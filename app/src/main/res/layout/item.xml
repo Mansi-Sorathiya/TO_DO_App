@@ -46,15 +46,15 @@
                 android:scaleY="1.5"
                 android:src="@drawable/edit" />
 
-<!--            <ImageView-->
-<!--                android:id="@+id/delete"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:layout_marginLeft="8dp"-->
-<!--                android:scaleX="1.5"-->
-<!--                android:scaleY="1.5"-->
-<!--                android:src="@drawable/delete" />-->
+            <!--            <ImageView-->
+            <!--                android:id="@+id/delete"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:layout_marginLeft="8dp"-->
+            <!--                android:scaleX="1.5"-->
+            <!--                android:scaleY="1.5"-->
+            <!--                android:src="@drawable/delete" />-->
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
