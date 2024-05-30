@@ -1,7 +1,6 @@
 package com.example.to_do_app;
 
 public class Model {
-
     Integer id;
     String name;
     boolean selected;

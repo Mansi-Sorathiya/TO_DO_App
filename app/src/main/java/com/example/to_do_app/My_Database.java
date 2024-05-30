@@ -15,7 +15,7 @@ public class My_Database extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String query="create table Category(ID integer primary key autoincrement,NAME text)";
+        String query = "create table Category(ID integer primary key autoincrement,NAME text)";
         db.execSQL(query);
         Log.d("TAG", "onCreate: Table Created");
 
@@ -27,16 +27,16 @@ public class My_Database extends SQLiteOpenHelper {
     }
 
     public void addData(String addCategory) {
-        String query="insert into Category(NAME) values('"+addCategory+"')";
-        SQLiteDatabase db=getWritableDatabase();
+        String query = "insert into Category(NAME) values('" + addCategory + "')";
+        SQLiteDatabase db = getWritableDatabase();
         db.execSQL(query);
 
     }
 
     public Cursor viewData() {
-        String query="select * from Category";
-        SQLiteDatabase db=getReadableDatabase();
-        Cursor cursor=db.rawQuery(query,null);
+        String query = "select * from Category";
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
         return cursor;
     }
 
@@ -48,8 +48,8 @@ public class My_Database extends SQLiteOpenHelper {
 
     public void deleteData(Integer id) {
 
-        String query="delete from Category where ID="+id+"";
-        SQLiteDatabase db=getWritableDatabase();
+        String query = "delete from Category where ID=" + id + "";
+        SQLiteDatabase db = getWritableDatabase();
         db.execSQL(query);
     }
 }
